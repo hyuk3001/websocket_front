@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#155E95"
+        android:background="#35455f"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent">
 
@@ -23,13 +23,13 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/logo" />
 
-        <!-- Username Textview -->
+        <!-- Username 입력란 -->
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/usernameEditText"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/circleImageView"
-            android:layout_alignStart="@+id/editText2"
+            android:layout_alignStart="@+id/passwordEditText"
             android:layout_marginStart="0dp"
             android:layout_marginTop="120dp"
             android:backgroundTint="#a5b3b5"
@@ -42,13 +42,13 @@
             android:textColorHint="#a5b3b5"
             android:textSize="30dp" />
 
-        <!-- Password Textview -->
+        <!-- Password 입력란 -->
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/passwordEditText"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText"
-            android:layout_alignStart="@+id/button"
+            android:layout_below="@+id/usernameEditText"
+            android:layout_alignStart="@+id/loginButton"
             android:layout_marginStart="10dp"
             android:backgroundTint="#a5b3b5"
             android:drawableLeft="@drawable/ic_lock_outline"
@@ -61,13 +61,13 @@
             android:textColorHint="#a5b3b5"
             android:textSize="30dp" />
 
-        <!-- Show/Not show Password value -->
+        <!-- 비밀번호 숨김여부 -->
         <ImageButton
             android:id="@+id/passwordVisibilityToggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/editText2"
-            android:layout_alignBottom="@id/editText2"
+            android:layout_alignEnd="@id/passwordEditText"
+            android:layout_alignBottom="@id/passwordEditText"
             android:layout_marginEnd="6dp"
             android:layout_marginBottom="17dp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -79,7 +79,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editText2"
+            android:layout_alignEnd="@+id/passwordEditText"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="55dp"
             android:layout_marginBottom="32dp"
@@ -89,12 +89,12 @@
 
         <!-- Login Button -->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView2"
+            android:layout_below="@+id/passwordEditText"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="145dp"
             android:width="290dp"
             android:background="@drawable/rounded_button_background"
             android:padding="20dp"
@@ -116,7 +116,7 @@
             android:id="@+id/errorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editText2"
+            android:layout_below="@id/passwordEditText"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:textColor="#FF0000"
