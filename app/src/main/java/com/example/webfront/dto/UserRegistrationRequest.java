@@ -14,8 +14,8 @@ public class UserRegistrationRequest {
     private String name;
     private String phone;
     private String email;
-    private String zipcode;
-    private String streetAdr;
-    private String detailAdr;
+//    private String zipcode;   이거 필요없을듯
+//    private String streetAdr;
+//    private String detailAdr;
     private String role;
 }
