@@ -1,5 +1,6 @@
 package com.example.webfront.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private Button loginButton;
+    private Button registrationButton;
     private Animation buttonPressedAnim;
 
     @Override
@@ -40,7 +42,15 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
+        registrationButton = findViewById(R.id.RegisterTextView);
         buttonPressedAnim = AnimationUtils.loadAnimation(this, R.anim.button_pressed_anim);
+
+        // 회원가입 버튼
+        registrationButton.setOnClickListener(v -> {
+            // 회원가입 화면으로 이동
+            Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+            startActivity(intent);
+        });
 
         loginButton.setOnClickListener(v -> {
             loginButton.startAnimation(buttonPressedAnim);
@@ -60,5 +70,6 @@ public class LoginActivity extends AppCompatActivity {
 
             // API 호출 (loginRequest 전달)
         });
+
     }
 }

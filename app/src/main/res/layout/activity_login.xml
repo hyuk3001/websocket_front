@@ -31,7 +31,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/circleImageView"
-            android:layout_alignStart="@+id/passwordEditText"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="120dp"
             android:backgroundTint="#a5b3b5"
@@ -42,7 +42,7 @@
             android:text=""
             android:textColor="#a5b3b5"
             android:textColorHint="#a5b3b5"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <!-- Password 입력란 -->
         <EditText
@@ -50,8 +50,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/usernameEditText"
-            android:layout_alignStart="@+id/loginButton"
-            android:layout_marginStart="10dp"
+            android:layout_alignStart="@+id/usernameEditText"
             android:backgroundTint="#a5b3b5"
             android:drawableLeft="@drawable/ic_lock_outline"
             android:drawablePadding="15dp"
@@ -61,7 +60,7 @@
             android:text=""
             android:textColor="#a5b3b5"
             android:textColorHint="#a5b3b5"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <!-- 비밀번호 숨김여부 -->
         <ImageButton
@@ -73,36 +72,58 @@
             android:layout_marginEnd="6dp"
             android:layout_marginBottom="17dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Toggle password visibility"
+            android:contentDescription="비밀번호 확인 토글버튼"
             android:src="@drawable/ic_visibility_off" />
-
-        <!-- Forgot Password TextView/button -->
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/passwordEditText"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="55dp"
-            android:layout_marginBottom="32dp"
-            android:text="Forget password ?"
-            android:textColor="#a5b3b5"
-            android:textSize="25dp" />
 
         <!-- Login Button -->
         <Button
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/passwordEditText"
+            android:layout_above="@+id/userManageSection"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="145dp"
+            android:layout_marginBottom="15dp"
             android:width="290dp"
-            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="#4F46E5"
             android:padding="20dp"
             android:text="LOGIN"
             android:textColor="#fff"
             android:textSize="25dp" />
+
+        <!-- Forgot Password TextView/button -->
+        <LinearLayout
+            android:id="@+id/userManageSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="190dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/findPasswordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 찾기"
+                android:textColor="#a5b3b5"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                />
+
+            <Button
+                android:id="@+id/RegisterTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="회원가입 하기"
+                android:textColor="#a5b3b5"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"/>
+
+        </LinearLayout>
 
         <!-- Close Keyboard Button -->
         <ImageButton
